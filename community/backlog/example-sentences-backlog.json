@@ -384,7 +384,7 @@
     "jlpt": "N4",
     "id": 43,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "japanese": "この漢字の読み方を教えてください。",
@@ -392,7 +392,7 @@
     "english": "Please tell me how to read this kanji.",
     "jlpt": "N5",
     "id": 44,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
