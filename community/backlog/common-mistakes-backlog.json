@@ -844,7 +844,7 @@
     "correct": "図書館で本を借りました。",
     "explanation": "で marks location of action. (Pattern set 6)",
     "id": 106,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
