@@ -366,7 +366,7 @@
     "example": "祖母に手紙を書きました。",
     "id": 41,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "termA": "マンション (manshon)",
@@ -374,7 +374,7 @@
     "explanation": "マンション means apartment building in Japanese. (Set 3)",
     "example": "駅前のマンションに住んでいます。",
     "id": 42,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
