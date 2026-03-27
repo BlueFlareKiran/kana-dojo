@@ -4,8 +4,11 @@ import { usePathname } from 'next/navigation';
 import { removeLocaleFromPath } from '@/shared/lib/pathUtils';
 import { Sparkles } from 'lucide-react';
 
-const badgeClasses =
-  'flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border-b-6 border-(--secondary-color-accent) bg-(--secondary-color) leading-none text-(--background-color) animate-float [--float-distance:-3px]';
+const USE_NEW_BADGE_DESIGN = true;
+
+const badgeClasses = USE_NEW_BADGE_DESIGN
+  ? 'flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border-b-6 border-(--secondary-color-accent) bg-(--secondary-color) leading-none text-(--background-color) animate-float [--float-distance:-4px]'
+  : 'flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border-b-6 border-(--main-color-accent) bg-(--main-color) leading-none text-(--background-color)';
 
 const Banner = () => {
   const pathname = usePathname();
