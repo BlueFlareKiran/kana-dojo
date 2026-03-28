@@ -96,7 +96,7 @@
     "example": "ノートにシールを貼った。",
     "id": 11,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ホッチキス (hocchikisu)",
@@ -159,7 +159,7 @@
     "example": "父は都内でサラリーマンをしている。",
     "id": 18,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ペットボトル (petto botoru)",
@@ -276,7 +276,7 @@
     "example": "ノートにシールを貼った。",
     "id": 31,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ホッチキス (hocchikisu)",
@@ -339,7 +339,7 @@
     "example": "父は都内でサラリーマンをしている。",
     "id": 38,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ペットボトル (petto botoru)",
@@ -455,7 +455,7 @@
     "explanation": "シール usually means sticker/label. (Set 3)",
     "example": "ノートにシールを貼った。",
     "id": 51,
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -464,7 +464,7 @@
     "explanation": "ホッチキス means stapler. (Set 3)",
     "example": "資料をホッチキスで留めてください。",
     "id": 52,
-    "issued": true,
+    "issued": false,
     "completed": false
   },
   {
@@ -519,7 +519,7 @@
     "example": "父は都内でサラリーマンをしている。",
     "id": 58,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ペットボトル (petto botoru)",
@@ -636,7 +636,7 @@
     "example": "ノートにシールを貼った。",
     "id": 71,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ホッチキス (hocchikisu)",
@@ -699,7 +699,7 @@
     "example": "父は都内でサラリーマンをしている。",
     "id": 78,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ペットボトル (petto botoru)",
@@ -816,7 +816,7 @@
     "example": "ノートにシールを貼った。",
     "id": 91,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ホッチキス (hocchikisu)",
@@ -879,7 +879,7 @@
     "example": "父は都内でサラリーマンをしている。",
     "id": 98,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ペットボトル (petto botoru)",
@@ -996,7 +996,7 @@
     "example": "ノートにシールを貼った。",
     "id": 111,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ホッチキス (hocchikisu)",
@@ -1059,7 +1059,7 @@
     "example": "父は都内でサラリーマンをしている。",
     "id": 118,
     "issued": false,
-    "completed": true
+    "completed": false
   },
   {
     "termA": "ペットボトル (petto botoru)",
