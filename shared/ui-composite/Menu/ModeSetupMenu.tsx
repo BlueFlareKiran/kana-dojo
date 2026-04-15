@@ -46,6 +46,16 @@ const difficultyIcons: Record<GauntletDifficulty, React.ReactNode> = {
   hard: <Zap size={20} />,
   'instant-death': <Skull size={20} />,
 };
+const USE_NEW_GAME_MODE_ICON_STYLE = true;
+const GAME_MODE_ICON_SIZE = 22;
+const GAME_MODE_ICON_FLOAT_DELAY_CLASS = '[animation-delay:180ms]';
+const gameModeIconStyle = {
+  base: 'motion-safe:animate-float flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border-b-6 transition-colors [--float-distance:-2px]',
+  selected:
+    'border-(--main-color-accent) bg-(--main-color) text-(--background-color)',
+  unselected:
+    'border-(--secondary-color-accent) bg-(--secondary-color) text-(--background-color) opacity-85',
+} as const;
 
 const ModeSetupMenu = ({
   isOpen,
@@ -220,6 +230,7 @@ const ModeSetupMenu = ({
       : currentDojo === 'kanji'
         ? 'Kanji'
         : 'Vocabulary';
+  const ModeIcon = mode === 'blitz' ? Zap : mode === 'gauntlet' ? Swords : Play;
 
   if (!isOpen) return null;
 
@@ -229,24 +240,9 @@ const ModeSetupMenu = ({
         <div className='w-full max-w-lg space-y-4'>
           {/* Header */}
           <div className='space-y-3 text-center'>
-            {mode === 'blitz' && (
-              <Zap
-                size={56}
-                className='mx-auto text-(--secondary-color)'
-              />
-            )}
-            {mode === 'train' && (
-              <Play
-                size={56}
-                className='mx-auto text-(--secondary-color)'
-              />
-            )}
-            {mode === 'gauntlet' && (
-              <Swords
-                size={56}
-                className='mx-auto text-(--secondary-color)'
-              />
-            )}
+            <span className='motion-safe:animate-float mx-auto flex h-20 w-20 items-center justify-center rounded-3xl border-b-14 border-(--secondary-color-accent) bg-(--secondary-color) text-(--background-color) [--float-distance:-5px]'>
+              <ModeIcon size={40} className='fill-current' />
+            </span>
             <h1 className='text-2xl font-bold text-(--main-color)'>
               {dojoLabel}{' '}
               {mode === 'blitz'
@@ -485,7 +481,7 @@ function GameModeCards({
 
   return (
     <div className='space-y-3'>
-      {gameModes.map(gameModeOption => {
+      {gameModes.map((gameModeOption, index) => {
         const isSelected = gameModeOption.id === selectedGameMode;
         const Icon = gameModeOption.icon;
 
@@ -504,13 +500,23 @@ function GameModeCards({
           >
             <div
               className={clsx(
-                'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl',
-                isSelected
-                  ? 'bg-(--main-color) text-(--background-color)'
-                  : 'bg-(--border-color) text-(--muted-color)',
+                USE_NEW_GAME_MODE_ICON_STYLE
+                  ? gameModeIconStyle.base
+                  : 'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl',
+                USE_NEW_GAME_MODE_ICON_STYLE &&
+                  (isSelected
+                    ? gameModeIconStyle.selected
+                    : gameModeIconStyle.unselected),
+                USE_NEW_GAME_MODE_ICON_STYLE &&
+                  index === 1 &&
+                  GAME_MODE_ICON_FLOAT_DELAY_CLASS,
+                !USE_NEW_GAME_MODE_ICON_STYLE &&
+                  (isSelected
+                    ? 'bg-(--main-color) text-(--background-color)'
+                    : 'bg-(--border-color) text-(--muted-color)'),
               )}
             >
-              <Icon size={24} />
+              <Icon size={USE_NEW_GAME_MODE_ICON_STYLE ? GAME_MODE_ICON_SIZE : 24} />
             </div>
             <div className='min-w-0 flex-1'>
               <h3 className='text-lg font-medium text-(--main-color)'>
